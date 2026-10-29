@@ -1,0 +1,263 @@
+:root {
+    --verde: #00A859;
+    --negro: #000;
+    --blanco: #fff;
+    --sans: Arial, Helvetica, sans-serif;
+    --serif: Georgia, serif;
+    --fs-xl: 6rem;
+    --fs-l: 2rem;
+    --fs-m: 1.3rem;
+    --fs-s: 1rem;
+    --borde: 3px solid var(--negro);
+    --esp-s: 12px;
+    --esp-m: 24px;
+    --esp-l: 48px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+body {
+    background: var(--verde);
+    color: var(--negro);
+    font: var(--fs-m)/1.45 var(--serif);
+    padding: var(--esp-l) 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+p {
+    margin-bottom: var(--esp-s);
+}
+
+section,
+.intro {
+    margin-bottom: var(--esp-l);
+}
+
+h1,
+h2,
+dt,
+dd,
+.subtitle,
+.step-title,
+.steps li::before,
+.btn-copy {
+    font-family: var(--sans);
+    line-height: 1.1;
+}
+
+h1,
+h2,
+dt,
+.subtitle,
+.step-title {
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+h1 {
+    font-size: var(--fs-xl);
+    letter-spacing: -0.02em;
+    line-height: 1;
+}
+
+h2,
+.header,
+.steps li::before {
+    border-bottom: var(--borde);
+    padding-bottom: var(--esp-s);
+    margin-bottom: var(--esp-m);
+}
+
+h2,
+dd,
+.lead,
+.contact-subtitle,
+.steps li::before {
+    font-size: var(--fs-l);
+}
+
+.lead,
+.contact-subtitle {
+    line-height: 1.25;
+}
+
+.subtitle {
+    margin-top: var(--esp-s);
+}
+
+.intro,
+.two-col,
+.facts,
+.steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--esp-l);
+}
+
+.intro {
+    grid-template-columns: 1.4fr 1fr;
+    align-items: center;
+}
+
+.illustrations {
+    display: flex;
+    gap: var(--esp-s);
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.illustrations img {
+    max-width: 180px;
+    min-width: 0;
+    flex: 1 1 0;
+    filter: invert();
+}
+
+.illustrations img:nth-child(1) {
+    rotate: -6deg;
+}
+
+.illustrations img:nth-child(2) {
+    rotate: 5deg;
+    margin-top: var(--esp-l);
+}
+
+.illustrations img:nth-child(3) {
+    rotate: -3deg;
+    margin-top: var(--esp-s);
+}
+
+.facts {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border: var(--borde);
+}
+
+.fact {
+    padding: var(--esp-m);
+    border-right: var(--borde);
+}
+
+.fact:last-child {
+    border: none;
+}
+
+dt,
+small,
+.note,
+.cierre {
+    font-size: var(--fs-s);
+}
+
+dt {
+    margin-bottom: var(--esp-s);
+}
+
+small {
+    display: block;
+    font-family: var(--serif);
+    margin-top: var(--esp-s);
+}
+
+.note {
+    font-style: italic;
+}
+
+.steps {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--esp-m);
+    list-style: none;
+    counter-reset: paso;
+}
+
+.steps li::before {
+    counter-increment: paso;
+    content: counter(paso);
+    display: block;
+    margin-bottom: var(--esp-s);
+}
+
+.step-title {
+    display: block;
+    margin-bottom: var(--esp-s);
+}
+
+.contact {
+    background: var(--negro);
+    color: var(--blanco);
+    padding: var(--esp-m);
+}
+
+.contact h2 {
+    border-color: var(--blanco);
+}
+
+.btn-copy {
+    display: inline-flex;
+    gap: var(--esp-s);
+    margin: var(--esp-s) 0 var(--esp-m);
+    padding: var(--esp-s) var(--esp-m);
+    background: var(--verde);
+    border: none;
+    font-size: var(--fs-m);
+    text-align: left;
+    word-break: break-all;
+    cursor: pointer;
+}
+
+.btn-copy:focus-visible {
+    outline: 3px solid var(--blanco);
+    outline-offset: 3px;
+}
+
+.contact-subtitle,
+.cierre p {
+    margin: 0;
+}
+
+@media (max-width: 1020px) {
+    :root {
+        --fs-xl: 2.6rem;
+        --fs-l: 1.45rem;
+        --esp-l: 36px;
+    }
+
+    body {
+        padding: var(--esp-l) 16px;
+    }
+
+    .intro,
+    .two-col,
+    .facts,
+    .steps {
+        grid-template-columns: 1fr;
+        gap: var(--esp-m);
+    }
+
+    .facts {
+        gap: 0;
+    }
+
+    .fact {
+        border-right: none;
+        border-bottom: var(--borde);
+    }
+
+    .illustrations {
+        order: -1;
+        justify-content: flex-start;
+    }
+
+    .illustrations img {
+        max-width: 33%;
+    }
+}

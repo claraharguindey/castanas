@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Castañas por la Pública</title>
+    <meta name="description"
+        content="Preventa de castañas del Valle del Jerte a 4 €/kg (o lo que decida tu centro): todo lo que pase de 3 € va a la caja de resistencia de tu cole o insti.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="header">
+            <h1>¡Castañas por la Pública!</h1>
+            <p class="subtitle">Cajas de resistencia y apoyo mutuo</p>
+        </header>
+
+        <div class="intro">
+            <div>
+                <p class="lead">
+                    Una idea que surge entre castaños y manifestaciones: llenar las cajas de
+                    resistencia de la huelga por la educación pública a golpe de castaña.
+                </p>
+                <p>
+                    Os proponemos una preventa: cada centro hace su pedido directamente a productores del
+                    Valle del Jerte, y de cada kilo, una parte va a la caja de resistencia de vuestro cole o
+                    insti. Ya de paso, apoyamos a la gente que trabaja en el campo.
+                </p>
+            </div>
+            <div class="illustrations">
+                <img src="1.png" alt="Ilustración de castaña">
+                <img src="2.png" alt="Ilustración de castaña">
+                <img src="3.png" alt="Ilustración de castaña">
+            </div>
+        </div>
+
+        <section aria-labelledby="t-datos">
+            <h2 id="t-datos">Lo básico</h2>
+            <dl class="facts">
+                <div class="fact">
+                    <dt>Precio</dt>
+                    <dd>4 € / kg<small>o lo que decidáis en vuestro centro</small></dd>
+                </div>
+                <div class="fact">
+                    <dt>Para tu caja</dt>
+                    <dd>1 € por kilo<small>a 4 €/kg: 25 € por saco</small></dd>
+                </div>
+                <div class="fact">
+                    <dt>Pedido</dt>
+                    <dd>Sacos de 25 kg<small>uno o más por centro, en preventa</small></dd>
+                </div>
+                <div class="fact">
+                    <dt>Entrega</dt>
+                    <dd>5 y 6 de noviembre<small>en Madrid</small></dd>
+                </div>
+            </dl>
+        </section>
+
+        <section aria-labelledby="t-reparto">
+            <h2 id="t-reparto">¿Cuánto suma tu centro?</h2>
+            <div class="two-col">
+                <p>
+                    3&nbsp;€ de cada kilo son para quien las cultiva y el resto va a la caja de resistencia de
+                    vuestro centro. A 4&nbsp;€ el kilo, cada saco son 25&nbsp;€ para la caja.
+                </p>
+                <p class="note">
+                    Son las mismas castañas extremeñas que en el súper están a 7, 10 o hasta 13&nbsp;€/kg…
+                    solo que cogidas y escogidas con un extra de la alegría que da el apoyo mutuo.
+                </p>
+            </div>
+        </section>
+
+        <section aria-labelledby="t-pasos">
+            <h2 id="t-pasos">¿Cómo nos organizamos?</h2>
+            <ol class="steps">
+                <li>
+                    <span class="step-title">Habladlo en el centro</span>
+                    Con profes, familias y alumnado, a ver quién se apunta.
+                </li>
+                <li>
+                    <span class="step-title">¿Sale un saco?</span>
+                    Si hay interés para pedir en preventa un saco de 25&nbsp;kg (o más), ¡adelante!
+                </li>
+                <li>
+                    <span class="step-title">¡Escríbenos!</span>
+                    Os mandamos un enlace e instrucciones para preparar y gestionar el pedido.
+                </li>
+                <li>
+                    <span class="step-title">¡Castañas!</span>
+                    La entrega en Madrid está prevista para el 5 y 6 de noviembre.
+                </li>
+            </ol>
+        </section>
+
+        <section class="contact" aria-labelledby="t-contacto">
+            <h2 id="t-contacto">Contacta</h2>
+            <p>
+                Para pedir, o si os apetece echar una mano en Madrid con la gestión, el transporte o el reparto.
+            </p>
+
+            <button class="btn-copy" id="copyBtn" type="button" onclick="copyEmail()"
+                aria-label="Copiar dirección de correo castaneae_a_publica@proton.me">
+                <span>castaneae_a_publica@proton.me</span>
+                <span id="copyStatus" aria-live="polite">[Copiar]</span>
+            </button>
+
+            <p class="contact-subtitle">
+                ¡Llenemos las cajas de resistencia a golpe de castaña!
+            </p>
+        </section>
+
+        <blockquote class="cierre">
+            <p>
+                «El trabajo y la lucha por un mundo deseable a menudo nos regala muy buenas compañías».
+                <cite>Esperanza Realista</cite>, VV.AA.
+            </p>
+        </blockquote>
+
+    </div>
+
+</body>
+
+</html>
