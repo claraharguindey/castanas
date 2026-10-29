@@ -172,6 +172,21 @@ small {
     font-style: italic;
 }
 
+/* Caja de ejemplos: precio/kg → lo que suma cada saco */
+.ejemplos {
+    grid-template-columns: repeat(3, 1fr);
+    align-self: start;
+}
+
+.ejemplos .fact {
+    padding: var(--esp-m) var(--esp-s);
+}
+
+.ejemplos .destacado {
+    background: var(--negro);
+    color: var(--blanco);
+}
+
 .steps {
     grid-template-columns: repeat(4, 1fr);
     gap: var(--esp-m);
@@ -259,5 +274,19 @@ small {
 
     .illustrations img {
         max-width: 33%;
+    }
+
+    .ejemplos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .ejemplos .fact {
+        padding: var(--esp-s);
+        border-bottom: none;
+        border-right: var(--borde);
+    }
+
+    .ejemplos .fact:last-child {
+        border: none;
     }
 }
